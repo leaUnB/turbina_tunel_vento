@@ -12,6 +12,18 @@
 // 24 ago 2024
 // 30 ago 2024 
 // Enderecos e formatos Modbus Ok
+// Input register 1  velocidade
+// Input register 2  torque
+// Input register 3  erro
+// Input register 4  control_pwm
+//
+// Holding register 10 setpoint
+// Holding register 11 ganho 
+// Holding register 12 offset
+//  
+// 2024/09/05  Necessidade de criar duas variaveis não volatis ganho e offset para ajustar a calibracao do torque
+//             Essas duas variaveis tambem serão gravadas e lidos como Holding Register do ModBus 
+
 
 
 
@@ -69,7 +81,7 @@ int relay12 = 7;
 //                       PID variables
 //----------------------------------------------------------------
 
-float textbox;
+//float textbox;
 float setPoint = 100; //frontal
 
 
@@ -97,6 +109,7 @@ float D = 0.0;
 long Ntime;
 long Ltime;
 float torque = 0.0;
+
 
 void interrup_tempo(void)
 {
@@ -174,16 +187,19 @@ void setup() {
 
 }
 
+float ganho=1.0;
+float offset=0.0;
+
 void loop() {
   // aqui falta padronizar as passagens dos valores pelo Modbus 
   mb.task();
-  mb.Ireg(1,word(freq));
-  mb.Ireg(2,word(torque*100));
-  mb.Ireg(3,word(erro*100));
-  mb.Ireg(4,word(control_pwm));
+  mb.Ireg(1,int(freq));
+  mb.Ireg(2,int(torque*100));
+  mb.Ireg(3,int(erro*100));
+  mb.Ireg(4,int(control_pwm));
   setPoint=float(mb.Hreg(10)); 
 
-  torque = (1.00*scale.get_units()- 0.0);
+  torque = (ganho*scale.get_units()- offset);  // os valores de ganho e offset ficam no eeprom
 }
 
 //----------------------------------------------------------------
@@ -304,5 +320,3 @@ void sense_rpm() {
 
   }
 }*/
-
-
