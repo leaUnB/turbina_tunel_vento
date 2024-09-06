@@ -30,6 +30,7 @@
 #include "MsTimer2.h"
 #include <Modbus.h>
 #include <ModbusSerial.h>
+#include <EEPROM.h>
 
 ModbusSerial mb;
 
@@ -107,8 +108,11 @@ float D = 0.0;
 
 
 long Ntime;
-long Ltime;
+//long Ltime;
 float torque = 0.0;
+
+float ganho;
+float offset;
 
 
 void interrup_tempo(void)
@@ -143,6 +147,8 @@ void interrup_tempo(void)
   control_pwm = sensorValue / 255.0;
 }
 
+
+
 //----------------------------------------------------------------
 void setup() {
 
@@ -172,6 +178,17 @@ void setup() {
   mb.addIreg(3);   // erro        inteiro com sinal dividro por 100 
   mb.addIreg(4);   // control_pwm inteiro sem sinal 
   mb.addHreg(10);  // inteiro sem sinal 
+  mb.addHreg(11);  // inteiro com sinal multiplicado por 100 para 2 pontos decimais 
+  mb.addHreg(12);  // inteiro com sinal multiplicado por 100 para 2 pontos decimais 
+  mb.addCoil(1);
+
+  EEPROM.get(10, ganho);
+  EEPROM.get(20, offset);
+  
+  mb.Hreg(11,int(ganho*100)); // le os valores do ganho do eeprom
+  mb.Hreg(12,int(offset*100)); // le os valores do offset do eeprom
+  mb.Coil(1,0);
+
   //----------------------------------------------------------------
   //                           RPM
   //----------------------------------------------------------------
@@ -183,12 +200,13 @@ void setup() {
   digitalWrite(pin, HIGH);
   attachInterrupt(digitalPinToInterrupt(3), sense_rpm , RISING);
 
-  Ltime = millis();
+  //Ltime = millis();
 
 }
 
-float ganho=1.0;
-float offset=0.0;
+
+bool calibra;
+bool gravou_eeprom=0;
 
 void loop() {
   // aqui falta padronizar as passagens dos valores pelo Modbus 
@@ -198,8 +216,24 @@ void loop() {
   mb.Ireg(3,int(erro*100));
   mb.Ireg(4,int(control_pwm));
   setPoint=float(mb.Hreg(10)); 
-
+  calibra =mb.Coil(1);
+  ganho   =float(mb.Hreg(11) /100); 
+  offset  =float(mb.Hreg(12) /100);   
+  
   torque = (ganho*scale.get_units()- offset);  // os valores de ganho e offset ficam no eeprom
+  
+  // ================================
+  // rotina para gravar eeprom
+  // ================================
+  if ((calibra) && !gravou_eeprom)
+  { 
+    EEPROM.put(10, ganho);
+    EEPROM.put(20, offset);
+   // grava os valores do ganho e offset no eeprom
+   gravou_eeprom=1;
+  }
+  if (!calibra) gravou_eeprom=0;
+  
 }
 
 //----------------------------------------------------------------
@@ -212,111 +246,4 @@ void sense_rpm() {
 }
 
 
-
-  //----------------------------------------------------------------
-  //                           Control
-  //----------------------------------------------------------------
-
-  /*if (Serial.available()) {
-    textbox = Serial.parseInt();
-      setPoint = textbox; //setPoint
-      //setPoint2 = setPoint;
- 
-
-    Ltime = millis();
-  }*/
-
- // if(millis()>30000) setPoint = 1600;
- // setPoint2 = setPoint;
-
-  //  Ltime = millis();
-
-
-  //automatic control
-
-  //      Ntime = millis();
-  //      if (Ntime - Ltime >= 30000L) {
-  //        setPoint = setPoint - 100;
-  //        Ltime += 30000L;
-  //      }
-
-
-  //----------------------------------------------------------------
-  //                            PID
-  //----------------------------------------------------------------
-
-  //T1
-  /*currentMillis = millis();                                    
-  if (currentMillis - previousMillis_pid > interval_pid) {
-    previousMillis_pid = currentMillis;
-  if (freq < 3000) {
-
-  amostra = freq;                            //10ms
-  erro =  setPoint-amostra;
-      digitalWrite(relay11, LOW);
-      digitalWrite(relay12, LOW);
-
-
-
-
-  float agora = millis();
-
-  deltaTempo = (agora - ultimoMomento) / 1000.0f; // Tempo em segundos
-  ultimoMomento = agora;
-
-  P  = kP1 * erro;                                     // $ P = kP * erro $
-  I += kI1 * (erro) * (deltaTempo);                     // $ I(t)=kI*\Int{e(t)}*\delta{t} $
-  D  = kD1 * (AmostraAnterior  - amostra) / deltaTempo; // $ D(t)= kD*\delta{amostra}/\delta{t} $
-
-  pid = P + I + D;
-
-  AmostraAnterior = amostra;
-
-  pid = (pid >= 50 ? 50 : pid);
-  pid = (pid <= -50 ? -50 : pid);
-
-  sensorValue = (lastpid + pid);
-  sensorValue = (sensorValue >= 255 ? 255 : sensorValue);
-  sensorValue = (sensorValue <= 0 ? 0 : sensorValue);
-  lastpid = sensorValue;
-
-  //outputValue = map(sensorValue, 0, 255, 0, 255);
-  // change the analog out value:
-  analogWrite(analogOutPin, sensorValue);
-  delay(1);
-  }
-
-  control_pwm = sensorValue / 255.0;
-
-  } */
-   //analogWrite(analogOutPin, outputValue);
-
-
-
-  //----------------------------------------------------------------
-  //                          OUTPUTS
-  //----------------------------------------------------------------
-
-  /*currentMillis = millis();                                    
-  if (currentMillis - previousMillis_time > interval_time) {
-    previousMillis_time = currentMillis;
-
-    torque = (1.00*scale.get_units()- 0.0);
-
-    Serial.print("w \t");
-    Serial.print(freq, 0);
-
-    Serial.print("\t erro \t");
-    Serial.print(erro);
-
-    Serial.print("\t pwm% \t");
-    Serial.print(control_pwm, 2);
-
-    Serial.print("\t set\t");
-    Serial.print(setPoint);
-
-    Serial.print("\t T \t");
-    Serial.println(torque, 2);
-
-  }
-}*/
+  
