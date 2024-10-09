@@ -8,6 +8,9 @@ Foi feita a instalação padrão do Debian 12 por meio de um pendrive bootável,
 Para eventuais dúvidas acerca da instalação, segue [vídeo do youtube explicando](https://www.youtube.com/watch?v=QOuspK8MARk).
 
 Terminada a instalação, deve-se instalar o ScadaLTS e configurar as portas seriais do computador.
+
+**OBS**: O ambiente de trabalho utilizada no computador e que esse passo-a-passo se baseia é o ***KDE plasma***, por isso, caso queira usar outro, talvez algum dos passos não funcione da 
+forma que estamos explicando.
 ___
 
 ## Instalação e configuração do ScadaLTS
@@ -17,12 +20,9 @@ ___
 - Versão: *linux-installer_v1.3.3_ScadaLTS_v2.7.6.1_Setup*
 
 O SCADA instalado foi o ScadaLTS, um software derivado do Scada BR, que é melhor explicado clicando [aqui](https://github.com/SCADA-LTS/Scada-LTS?tab=readme-ov-file). A versão do 
-ScadaLTS utilizado foi a "[linux-installer_v1.3.3_ScadaLTS_v2.6.18_Setup.zip](https://github.com/SCADA-LTS/linux-installer/releases/download/v1.3.3/linux-installer_v1.3.3_ScadaLTS_v2.6.18_Setup.zip)."
+ScadaLTS utilizado foi a "[linux-installer_v1.3.3_ScadaLTS_v2.7.6.1_Setup.zip](https://github.com/SCADA-LTS/linux-installer/releases/download/v1.3.3/linux-installer_v1.3.3_ScadaLTS_v2.7.6.1_Setup.zip)."
 
 O passo-a-passo de instalação se encontra no link "[https://github.com/SCADA-LTS/linux-installer](https://github.com/SCADA-LTS/linux-installer)".
-
-O ambiente de trabalho utilizada no computador e que esse passo-a-passo se baseia é a ***KDE plasma***, por isso, caso queira usar outro, talvez algum dos passos não funcione da 
-forma que estamos explicando.
 
 ### Rodando o Scada na máquina local
 
@@ -36,7 +36,6 @@ Além da instalação, para iniciar o scada, é necessário rodar os arquivos ".
 4. Se a instalação foi feita de forma correta e os arquivos estão rodando no fundo, o scada estará rodando no link [localhost:8080/Scada-LTS](localhost:8080/Scada-LTS).
 
 Com o Scada rodando, o acesso é dado por meio do login e senha padrões "admin".
-
 ___
 
 ## Configuração cabo ethernet
