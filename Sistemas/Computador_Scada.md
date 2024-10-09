@@ -47,4 +47,17 @@ Para acessar as informações fornecidas no CLP, é necessário configurar o cab
 No prédio, existem 2 IPs fixos, um usado no CLP e outro no computador com Scada. 
 Para configurar o IP do computador, deve-se seguir o seguinte passo-a-passo:
 
+1. Clicar no ícone de "Redes" no canto inferior direito do monitor;
+2. Clicar em "Conexão cabeada 1";
+3. Clicar em "Configurar...";
+	- Será aberto as "Configurações do sistema" na aba "Conexões".
+4. Escolheremos a aba "IPv4" e selecionamos o método "Manual";
+5. Com isso, podemos colocar a configuração de **Servidores DNS**:***174.16.0.2***.
+6. Na parte à direita de onde tem as colunas "Endereço Máscara de rede Gateway", clicamos em "**+ Adicionar**".
+7. Com isso, podemos preencher os espaços das colunas como:
+	- **Endereço**:***140.80.0.1***;
+	- **Máscara de rede**:***255.255.255.0***;
 
+Com essa parte configurada, podemos controlar e acessar, por meio do Scada, aos **controles do túnel de vento**.
+
+Sobre a **configuração dos datapoints e datasets do scada**, encontram-se na pasta "**Datpoints e Datasets**". 
