@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# Colcar o caminho onde o Scada foi instalado e os arquivos "mysql_start.sh" e "tomcat_start.sh" se encontram
 caminho = '/home/tunel/scadalts/'
 
+# Roda os comandos de inicialização sem abrir um terminal
 nohup "$caminho/mysql_start.sh" &> /dev/null &
 sleep 2
 nohup "$caminho/tomcat_start.sh" &> /dev/null
