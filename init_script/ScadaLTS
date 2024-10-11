@@ -1,0 +1,7 @@
+#!/bin/bash
+
+caminho = '/home/tunel/scadalts/'
+
+nohup "$caminho/mysql_start.sh" &> /dev/null &
+sleep 2
+nohup "$caminho/tomcat_start.sh" &> /dev/null

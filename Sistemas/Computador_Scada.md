@@ -61,3 +61,13 @@ Para configurar o IP do computador, deve-se seguir o seguinte passo-a-passo:
 Com essa parte configurada, podemos controlar e acessar, por meio do Scada, aos **controles do túnel de vento**.
 
 Sobre a **configuração dos datapoints e datasets do scada**, encontram-se na pasta "**Datpoints e Datasets**". 
+
+___
+
+## Inicialização automática do Scada
+
+Pra tornar o sistema mais *Friendly User* (Amigável ao usuário), foi criado um *script* bash (.sh) para a realização da 
+inicialização do mesmo no instante em que o computador for ligado. O script, junto com o documento explicando a configuração do 
+computador, se encontra na pasta [init_script].
+
+___
