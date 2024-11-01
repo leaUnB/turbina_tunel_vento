@@ -1,5 +1,5 @@
 // Largura, em pixels
-var largura = 600;
+var largura = 627;
 // Configuração dos valores
 var minimo = 0;
 var maximo = 1760;
@@ -36,7 +36,7 @@ var scale_max = 600;
 
 // Customize bar
 var bar_height = 20;
-var bar_width = 600;
+var bar_width = 627;
 
 var background_color = "#FFFFFF";
 var foreground_color = "#12CE00";
