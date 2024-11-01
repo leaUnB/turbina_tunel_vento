@@ -1,5 +1,3 @@
-// COLOCAR ESSE CÓDIGO PARA CRIAR OS CONTROLADORES DE ROTAÇÃO DO TÚNEL
-
 // Largura, em pixels
 var largura = 600;
 // Configuração dos valores
@@ -14,10 +12,10 @@ var s = "";
 var comando = "mango.view.setPoint(" + point.id + ", " + pointComponent.id + ", value)" ;
 
 // Fundo verde escuro
-var fundo_verde_escuro = "background-color: #006400; color: #FFFFFF; padding: 2px; font-size: 20px; margin-left: 10px;"
+var fundo_verde_escuro = "background-color: #289428; color: #FFFFFF; padding: 2px; font-size: 20px; margin-left: 10px;"
 
 // Contêiner para as barras e o input
-s += "<div style='display: flex; align-items: center; background-color: #006400; padding: 10px; border-radius: 15px;'>";
+s += "<div style='display: flex; align-items: center; background-color: #289428; padding: 10px; border-radius: 15px;'>";
 
 // Contêiner interno para alinhar verticalmente as barras
 s += "<div style='flex-grow: 1;'>";

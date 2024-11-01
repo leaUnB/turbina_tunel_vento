@@ -1,5 +1,3 @@
-// INDICADORES
-
 // Descrição do medidor
 var descricao = "Temp (inativo)";
 // Formatação do valor
@@ -12,7 +10,7 @@ var tamanho = 200;
 var maximo = 45;
 var minimo = 25.4;
 // Configurar cores (o fundo por padrão é transparente)
-var cor_do_fundo = "#006400";  // Fundo verde escuro
+var cor_do_fundo = "#289428";  // Fundo verde escuro
 var cor_do_texto = "#FFFFFF";  // Texto branco
 // Defina a cor padrão da barra do medidor
 var cor_padrao = "#12CE00";
@@ -61,7 +59,7 @@ if (typeof cor_do_fundo != "string" || cor_do_fundo.length < 1) {
 
 // Criação de elementos HTML
 var s = "";
-s += "<div style='background-color: #006400; border-radius: 15px; padding: 10px;'>";
+s += "<div style='background-color: #289428; border-radius: 15px; padding: 10px;'>";
 s += "  <canvas id='medidor" + pointComponent.id + "' height='" + (0.75 * tamanho) + "' width='" + tamanho + "' style='border-radius: 15px;'>";
 s += "          <center>";
 s += "              <strong>Seu navegador é antigo e não suporta este recurso.<br>Por favor, atualize-o.</strong>";
