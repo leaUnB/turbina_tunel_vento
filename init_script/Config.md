@@ -21,7 +21,9 @@ Abrindo o terminal, coloca-se o comando 'sudo contrab -e'. Com esse comando, a s
 abrirá uma nota no 'nano' (editor de texto do terminal) que, no final dela, apertamos a tecla "Enter" e, nessa linha, colocamos 
 o comando:
 
-'@reboot /bin/bash /home/tunel/bin/ScadaLTS'
+```
+@reboot /bin/bash /home/tunel/bin/ScadaLTS
+```
 
 Esse comando no arquivo contrab faz com que, na hora em que o sistema é inicalizado, o ScadaLTS rode ao fundo de forma 
 automática sem abrir o terminal.
@@ -35,5 +37,7 @@ ___
 
 1. Os caminhos usados nesse passo-a-passo são referentes à forma com eu fiz a instalação do Debian e do Scada. **É NECESSÁRIO 
 MUDAR O CAMINHO PARA CADA COMPUTADOR**;
-2. Pode ser que o código .sh não tenha permissão de ser executada. Isso se resolve por 
-meio do comando 'chmod +r /home/tunel/bin/ScadaLTS';
+2. Pode ser que o código .sh não tenha permissão de ser executada. Isso se resolve por meio do comando 
+```
+chmod +r /home/tunel/bin/ScadaLTS
+```

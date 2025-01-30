@@ -2,15 +2,14 @@
 
 ## Configuração do Computador
 
-- Sistema Operacional: *Debian 12*
+- Sistema Operacional: *Ubuntu 22.04 LTS*
 
-Foi feita a instalação padrão do Debian 12 por meio de um pendrive bootável, seguindo o link [https://www.debian.org/download](https://www.debian.org/download).
+Foi feita a instalação padrão do Ubuntu 22.04 LTS por meio de um pendrive bootável, seguindo o link [https://releases.ubuntu.com/jammy/](https://releases.ubuntu.com/jammy/).
 Para eventuais dúvidas acerca da instalação, segue [vídeo do youtube explicando](https://www.youtube.com/watch?v=QOuspK8MARk).
 
 Terminada a instalação, deve-se instalar o ScadaLTS e configurar as portas seriais do computador.
 
-**OBS**: O ambiente de trabalho utilizada no computador e que esse passo-a-passo se baseia é o ***KDE plasma***, por isso, caso queira usar outro, talvez algum dos passos não funcione da 
-forma que estamos explicando.
+**OBS**: O ambiente de trabalho utilizada no computador e que esse passo-a-passo se baseia é o ***KDE plasma***, por isso, caso queira usar outro, talvez algum dos passos não funcione da forma que estamos explicando.
 ___
 
 ## Instalação e configuração do ScadaLTS
