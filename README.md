@@ -61,7 +61,8 @@ O controle do túnel e realizado por meio de um motor síncrono, um inversor, um
 ### 3.2.1 Motor Síncrono
 ### 3.2.2 Inversor
 
-O inversor utilizado é o [CFW 09](Manuais/inversor.pdf) da empresa WEG. 
+O inversor utilizado é o [CFW 09](Manuais/inversor.pdf) da empresa WEG.
+ 
 ### 3.2.3 CLP
 
 O Controlador Lógico Programável (PLC na sigla em inglês) utilizado é o [S7 1200](Manuais/s71200_system_manual_en-US_en-US.pdf) da marca Siemens.
