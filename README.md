@@ -13,11 +13,13 @@ O esquemático a seguir representa os sistemas do túnel de vento. Nele podemos 
 O sistema do tubo de pitot se encontra presente no túnel mas apenas pode ser utilizado de forma analógica, sem poder visualizar as informações coletadas no computador, apenas no medidor analógico localizado próximo ao Scada LTS.
 
 ![](Imagens/tunel_vento_diagrama.png)
+
 # 3. Os Sistemas do Túnel
 
 Atualmente no túnel de vento existem alguns sistemas para obter dados importantes para os estudos realizados nele. São eles:
 
 ## 3.1 Tubo de Pitot
+
 Mecanismo para encontrar a velocidade de escoamento de um fluido que se baseia na diferença entre a pressão dinâmica do mesmo e a do ambiente. São bastante utilizados na aviação.
 
 ![](Imagens/tubo-pitot-capa.jpg)
@@ -33,7 +35,7 @@ O esquemático do tubo de pitot é representado pelo seguintes elementos do diag
 ![](Imagens/esquema_pitot.png)
 
 Onde o tubo de pitot é o elemento presente no interior do túnel e o transdutor o resumo da instalação *in loco* e dos medidores analógico e eletrônico, conforme explicado no sub-tópico seguinte.
-### 3.1.1 Instalação *in loco*
+### 3.1.2 Instalação *in loco*
 
 No túnel, o tubo de pitot se localiza no canto superior esquerdo de quem abre a porta, próximo do acrílico transparente ao fundo.
 
@@ -58,7 +60,11 @@ Atualmente, esses sistema não está conectado ao computador, permitindo apenas 
 O controle do túnel e realizado por meio de um motor síncrono, um inversor, um CLP e um sistema de SCADA (*Supervisory Control and Data Aquisition*, em inglês), além de um sensor de porta aberta e um botão de parada.
 
 ![](Imagens/controle_tunel.png)
+
 ### 3.2.1 Motor Síncrono
+
+
+
 ### 3.2.2 Inversor
 
 O inversor utilizado é o [CFW 09](Manuais/inversor.pdf) da empresa WEG.
@@ -71,6 +77,8 @@ O Controlador Lógico Programável (PLC na sigla em inglês) utilizado é o [S7 
 
 O Sistema Supervisório de Controle e Aquisição de Dados (SCADA, na sigla em inglês) utilizado é o [SCADA LTS](https://github.com/SCADA-LTS/Scada-LTS), um software de código aberto desenvolvido na base do [Scada BR](https://scadabr.org/) que é um software desenvovlido no Brasil.
 
+Atualmente é o responsável por controlar da velocidade do vento e informar os valores de pressão e temperatura no interior do túnel.
+
 ### 3.2.5 Sensor de porta aberta
 
 Um sensor de continuidade composto por dois fios, onde um fica conectado na parte móvel da porta do túnel e o outro na parte fixa da estrutura. Quando fechada a porta, fecha-se o circuito e assim o sistema supervisório sabe que pode ligar o túnel.
@@ -82,12 +90,14 @@ Ambos fios passam juntos por de baixo do túnel de vento até a caixa de conexã
 ![](Imagens/sensor_fios.jpg)
 
 Dentro da caixa de conexão, ambos fios seguem juntos até o CLP, antes de chegarem ao sistema SCADA.
+
 ### 3.2.6 Botão de parada
 
 ## 3.3 Controle do Anemômetro de Fio Quente
 
 ___
 # 4. Controle de rotação da turbina eólica 
+
 Programa para fazer o ensaio de uma turbina eolica num túnel de vento aplicando carga e medindo torque e rotação
 
 O programa implementa o controle de velocidade da turbina por meio de um algoritmo PID tendo como entrada o setpoint de referência e acionando uma carga elétrica ligada na saída do gerador da turbina.
