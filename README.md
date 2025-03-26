@@ -28,7 +28,7 @@ Por meio da manipulação da equação de Bernoulli, chega-se à
 $$v=\sqrt{\frac{2(p_e-p_d)}{\rho}}$$
 onde $v$ é a velocidade do fluido, $\rho$ a densidade do ar, $p_e$ pressão de estagnação e $p_d$ pressão dinâmica. Esse valor de $v$ serve de parâmetro para os experimentos.
 
-A explicação de como o tubo de pitot está instalado e a representação no diagrama de blocos se encontra dentro da pasta **Sistemas do Túnel de Vento** com o nome [Tubo de Pitot.md](./Sistemas_Túnel_Vento/Tubo%20de%20Pitot.md).
+A explicação de como o tubo de pitot está instalado e a representação no diagrama de blocos se encontra dentro da pasta **Sistemas do Túnel de Vento** com o nome [Tubo de Pitot.md](Tubo%20de%20Pitot.md).
 
 Atualmente, esse sistema não está conectado ao computador, permitindo apenas a utilização dos dados que são obtidos de forma analógica.
 
@@ -36,33 +36,18 @@ Atualmente, esse sistema não está conectado ao computador, permitindo apenas a
 
 O controle do túnel e realizado por meio de um motor síncrono, um inversor, um CLP e um sistema de SCADA (*Supervisory Control and Data Aquisition*, em inglês), além de um sensor de porta aberta e um botão de parada.
 
-A explicação de cada um dos componentes do sistema de controle junto com a representação do sistema no diagrama de blocos se encontra na pasta **Sistemas do Túnel de Vento** com o nome [Controle do Túnel de Vento.md](./Sistemas_Túnel_Vento/Controle%20do%20Túnel%20de%20Vento.md).
+A explicação de cada um dos componentes do sistema de controle junto com a representação do sistema no diagrama de blocos se encontra na pasta **Sistemas do Túnel de Vento** com o nome [Controle do Túnel de Vento.md](Controle%20do%20Túnel%20de%20Vento.md).
 
+## 3.3 Controle do Anemômetro de Fio Quente
 ___
-# 4. Controle de rotação da turbina eólica 
 
-Programa para fazer o ensaio de uma turbina eolica num túnel de vento aplicando carga e medindo torque e rotação
+# 4 Experimentos do Túnel de Vento
 
-O programa implementa o controle de velocidade da turbina por meio de um algoritmo PID tendo como entrada o setpoint de referência e acionando uma carga elétrica ligada na saída do gerador da turbina.
+## 4.1 Turbina de Vento
 
-Os valores de velocidade, torque, erro e sinal de controle do PWM são disponibilizados pelo protocolo ModBus Serial, assim como o valor do referência (setpoint).
+Utiliza-se um protótipo de uma usina eólica (em tamanho reduzido) para realizar experimentos relacionados ao torque estático do rotor.
 
-Protocolo ModBus Serial ASCII. 
-Configuração da porta serial 9600 bps, 8N1.
+O material, o esquemático de funcionamento e como é feita a configuração dos componentes, assim como a calibração do mesmo, se encontram na pasta **Experimentos** com o nome [Turbina de Vento.md](./Experimentos/Turbina%20de%20Vento.md).
 
-Endereço da placa ModBus = 1 e os registradores são:
-
-| Registrador  | Endereço | variável    | tipo                                           |          range          |
-| ------------ | :------: | ----------- | ---------------------------------------------- | :---------------------: |
-| Entrada      |    1     | velocidade  | inteiro 2 bytes sem sinal                      |         0-65535         |
-| Entrada      |    2     | torque      | inteiro 2 bytes com sinal dividir por 100      |    -327,67 a +327,67    |
-| Entrada      |    3     | erro        | inteiro 2 bytes com sinal dividir por 100      |    -327,67 a +327,67    |
-| Entrada      |    4     | control_pwm | inteiro 2 bytes sem sinal                      |         0-65535         |
-| Holding      |    10    | setpoint    | inteiro 2 bytes sem sinal                      |         0-65535         |
-| Holding      |    11    | ganho       | inteiro 2 bytes sem sinal multiplicado por 100 |    -327,67 a +327,67    |
-| Holding      |    12    | offset      | inteiro 2 bytes sem sinal multiplicado por 100 |    -327,67 a +327,67    |
-| Coil stattus |    1     | calibracao  | bit                                            | 0 normal / 1 calibrando |
-
-Para gravar os dados de calibração é necessário mandar os dados de granho e offset via modbus para a placa e depois ligar e desligar o coil calibração.
 
 
