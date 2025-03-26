@@ -28,7 +28,7 @@ Por meio da manipulação da equação de Bernoulli, chega-se à
 $$v=\sqrt{\frac{2(p_e-p_d)}{\rho}}$$
 onde $v$ é a velocidade do fluido, $\rho$ a densidade do ar, $p_e$ pressão de estagnação e $p_d$ pressão dinâmica. Esse valor de $v$ serve de parâmetro para os experimentos.
 
-A explicação de como o tubo de pitot está instalado se encontra dentro da pasta **Sistemas do Túnel de Vento** com o nome [Tubo de Pitot.md](Sistemas_Túnel_Vento/Tubo de Pitot.md).
+A explicação de como o tubo de pitot está instalado se encontra dentro da pasta **Sistemas do Túnel de Vento** com o nome [Tubo de Pitot.md](./Sistemas_Túnel_Vento/Tubo%20de%20Pitot.md).
 
 Atualmente, esse sistema não está conectado ao computador, permitindo apenas a utilização dos dados que são obtidos de forma analógica.
 
