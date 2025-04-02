@@ -1,0 +1,1 @@
+# Código para rodar o arduino que calibra a curva de torque
