@@ -20,10 +20,12 @@ O túnel de vento foi projetado para ser utilizado em testes de desempenho e an�
 
 ![](./Túnel%20de%20Vento/Imagens/tunel_vento.jpg)
 
-Os sistemas do túnel de vento junto com suas representações em diagrama de blocos se encontra na pasta **Túnel de Vento** com o nome [Túnel de Vento.md](./Túnel%20de%20Vento/Túnel%20de%20vento.md).
+Os sistemas do túnel de vento junto com suas representações em diagrama de blocos se encontram na pasta **Túnel de Vento** com o nome [Túnel de vento.md](./Túnel%20de%20Vento/Túnel%20de%20vento.md).
 
 ## 2.2 O Túnel de Água
 
 O túnel de água foi projetado para ser utilizado em testes de desempenho e análise de escoamentos e aerodinâmcios em turbinas hidrocinéticas.
 
 ![](./Túnel%20de%20Água/Imagens/tunel_de_agua.jpg)
+
+Os sistemas do túnel de água junto com suas representações em diagrama de blocos se encontram na pasta **Túnel de Água** com o nome [Túnel de água.md](./Túnel%20de%20Água/Túnel%20de%20água.md).

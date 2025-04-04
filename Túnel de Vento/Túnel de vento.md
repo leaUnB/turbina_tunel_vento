@@ -1,4 +1,4 @@
-# Turbina túnel de vento
+# Túnel de vento
 
 # 1. Apresentação
 
@@ -6,13 +6,16 @@ O túnel de vento localizado no Laboratório de Energia e Ambiente (LEA) da Univ
 
 ![](./Imagens/tunel_vento.jpg)
 ___
+
 # 2. Diagrama do Túnel
 
-O esquemático a seguir representa os sistemas do túnel de vento. Nele podemos perceber três principais sistemas. Na cor amarela, o sistema de controle e aquisição de dados do anemômetro de fio quente. Na cor azul, o sistema de controle do túnel de vento, e em vermelho, os sensores e o controlador da turbina que realiza-se os testes.
+O esquemático a seguir representa os sistemas do túnel de vento. Nele podemos perceber três principais sistemas. Na cor amarela, o sistema de controle e aquisição de dados do anemômetro de fio quente. Na cor azul, o sistema de controle do túnel de vento (que também controla o [Túnel de água](../Túnel%20de%20Água/Túnel%20de%20água.md)), e em vermelho, os sensores e o controlador da turbina que realizam-se os testes.
 
 O sistema do tubo de pitot se encontra presente no túnel mas apenas pode ser utilizado de forma analógica, sem poder visualizar as informações coletadas no computador, apenas no medidor analógico localizado próximo ao Scada LTS.
 
 ![](./Imagens/tunel_vento_diagrama.png)
+
+___
 
 # 3. Os Sistemas do Túnel
 
@@ -28,7 +31,7 @@ Por meio da manipulação da equação de Bernoulli, chega-se à
 $$v=\sqrt{\frac{2(p_e-p_d)}{\rho}}$$
 onde $v$ é a velocidade do fluido, $\rho$ a densidade do ar, $p_e$ pressão de estagnação e $p_d$ pressão dinâmica. Esse valor de $v$ serve de parâmetro para os experimentos.
 
-A explicação de como o tubo de pitot está instalado e a representação no diagrama de blocos se encontra dentro da pasta **Sistemas do Túnel de Vento** com o nome [Tubo de Pitot.md](./Sistemas_Túnel_Vento/Tubo%20de%20Pitot.md).
+A explicação de como o tubo de pitot está instalado e a representação no diagrama de blocos se encontra dentro da pasta **Sistemas do Túnel de Vento** com o nome [Tubo de Pitot.md](./Sistemas/Tubo%20de%20Pitot.md).
 
 Atualmente, esse sistema não está conectado ao computador, permitindo apenas a utilização dos dados que são obtidos de forma analógica.
 
@@ -36,7 +39,7 @@ Atualmente, esse sistema não está conectado ao computador, permitindo apenas a
 
 O controle do túnel e realizado por meio de um motor síncrono, um inversor, um CLP e um sistema de SCADA (*Supervisory Control and Data Aquisition*, em inglês), além de um sensor de porta aberta e um botão de parada.
 
-A explicação de cada um dos componentes do sistema de controle junto com a representação do sistema no diagrama de blocos se encontra na pasta **Sistemas do Túnel de Vento** com o nome [Controle do Túnel de Vento.md](./Sistemas_Túnel_Vento/Controle%20do%20Túnel%20de%20Vento.md).
+A explicação de cada um dos componentes do sistema de controle junto com a representação do sistema no diagrama de blocos se encontra na pasta **Sistemas do Túnel de Vento** com o nome [Controle do Túnel de Vento.md](./Sistemas/Controle%20do%20Túnel%20de%20Vento.md).
 
 ## 3.3 Controle do Anemômetro de Fio Quente
 ___

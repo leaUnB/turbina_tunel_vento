@@ -11,6 +11,16 @@ O controle do túnel e realizado por meio de um motor síncrono, um inversor, um
 ## 1.2 Inversor
 
 O inversor utilizado é o [CFW 09](../Manuais/inversor.pdf) da empresa WEG.
+
+### 1.2.1 Parametrizações
+
+Por dividir o mesmo inversor com o túnel de água, antes de utilizar o túnel de vento, deve-se atentar para alguns parâmetros do inversor que precisam ser conferidos e possivelmente alterados. Os parâmetros que devem ser selecionados e os valores que devem estar aparecendo são os seguintes:
+
+| Parâmetros | Valores |   Unidades    |
+|------------|---------|---------------|
+|    P401    |  21,8   | Corrente (A)  |
+|    P402    |  1760   | Rotação  (RPM)|
+|    P404    |  12,5   | Potência (cv) |
  
 ## 1.3 CLP
 
