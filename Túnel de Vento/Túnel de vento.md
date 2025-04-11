@@ -44,13 +44,13 @@ A explicação de cada um dos componentes do sistema de controle junto com a rep
 ## 3.3 Controle do Anemômetro de Fio Quente
 ___
 
-# 4 Experimentos do Túnel de Vento
+# 4. Experimentos do Túnel de Vento
 
-## 4.1 Turbina de Vento
+# 4.1 Experimento da Turbina de Eixo Horizontal
 
-Utiliza-se um protótipo de uma usina eólica (em tamanho reduzido) para realizar experimentos relacionados ao torque estático do rotor.
+Utiliza-se um modelo reduzido de uma turbina de eixo vertical para realizar experimentos relacionados ao torque estático do rotor.
 
-O material, o esquemático de funcionamento e como é feita a configuração dos componentes, assim como a calibração do mesmo, se encontram na pasta **Experimentos** com o nome [Turbina de Vento.md](./Experimentos/Turbina%20de%20Vento.md)
+O material, o esquemático de funcionamento e como é feita a configuração dos componentes, assim como a calibração do mesmo, se encontram na pasta **Experimentos** com o nome [Turbina de Eixo Horizontal.md](./Experimentos/Turbina%20de%20Eixo%20Horizontal.md)
 
 
 

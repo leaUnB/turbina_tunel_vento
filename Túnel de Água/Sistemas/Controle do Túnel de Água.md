@@ -1,4 +1,4 @@
-# 1 Controle do Túnel de Água
+# 1. Controle do Túnel de Água
 
 O controle do túnel e realizado por meio de um motor síncrono, um inversor, um CLP e um sistema de SCADA (*Supervisory Control and Data Aquisition*, em inglês).
 
