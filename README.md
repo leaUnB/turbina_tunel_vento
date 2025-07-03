@@ -1,4 +1,4 @@
-# Laboratório de Energia e Ambiente Bancadas Experimentais (LEA)
+# Laboratório de Energia e Ambiente (LEA) -Bancadas Experimentais
 
 Apresentação
 
@@ -15,18 +15,18 @@ ___
 
 As Instalações Experimentais são:
 
-# 1 O Túnel de Vento
+# 1. [O Túnel de Vento](./tunel_de_vento/Readme.md)
 
 O túnel de vento foi projetado para ser utilizado em testes de desempenho e análise de escoamentos e aerodinâmicos em turbinas hidrocinéticas e eólicas, asas de avião e aerofólios, etc. e usa instrumentação específica e um sistema de aquisição de dados e controle para disponibilizar e organizar os dados medidos.
 
 ![](./tunel_de_vento/Imagens/tunel_vento.jpg)
 
-Os sistemas do túnel de vento junto com suas representações em diagrama de blocos se encontram na pasta **Túnel de Vento** com o nome [Túnel de vento.md](./tunel_de_vento/Readme.md).
+A descrição do túnel de vento se encontram no arquivo `Readme.md`  na pasta `tunel\_de\_vento/` [neste link] (./tunel_de_vento/Readme.md).
 
-# 2 O Túnel de Água
+# 2. [O Túnel de Água](./túnel_de_agua/Readme.md)
 
 O túnel de água foi projetado para ser utilizado em testes de desempenho e análise de escoamentos e aerodinâmcios em turbinas hidrocinéticas.
 
 ![](./Túnel%20de%20Água/Imagens/tunel_de_agua.jpg)
 
-Os sistemas do túnel de água junto com suas representações em diagrama de blocos se encontram na pasta **Túnel de Água** com o nome [Túnel de água.md](./túnel_de_agua/Readme.md).
+A descrição do túnel de água se encontram no arquivo `Readme.md` na pasta `tunel\_de\_agua/`  [neste link] (./túnel_de_agua/Readme.md)
