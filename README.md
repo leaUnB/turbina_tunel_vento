@@ -19,9 +19,9 @@ As Instalações Experimentais são:
 
 O túnel de vento foi projetado para ser utilizado em testes de desempenho e análise de escoamentos e aerodinâmicos em turbinas hidrocinéticas e eólicas, asas de avião e aerofólios, etc. e usa instrumentação específica e um sistema de aquisição de dados e controle para disponibilizar e organizar os dados medidos.
 
-![](./Túnel%20de%20Vento/Imagens/tunel_vento.jpg)
+![](./tunel_de_vento/Imagens/tunel_vento.jpg)
 
-Os sistemas do túnel de vento junto com suas representações em diagrama de blocos se encontram na pasta **Túnel de Vento** com o nome [Túnel de vento.md](./Túnel%20de%20Vento/Túnel%20de%20vento.md).
+Os sistemas do túnel de vento junto com suas representações em diagrama de blocos se encontram na pasta **Túnel de Vento** com o nome [Túnel de vento.md](./tunel_de_vento/Readme.md).
 
 # 2 O Túnel de Água
 
@@ -29,4 +29,4 @@ O túnel de água foi projetado para ser utilizado em testes de desempenho e an�
 
 ![](./Túnel%20de%20Água/Imagens/tunel_de_agua.jpg)
 
-Os sistemas do túnel de água junto com suas representações em diagrama de blocos se encontram na pasta **Túnel de Água** com o nome [Túnel de água.md](./Túnel%20de%20Água/Túnel%20de%20água.md).
+Os sistemas do túnel de água junto com suas representações em diagrama de blocos se encontram na pasta **Túnel de Água** com o nome [Túnel de água.md](./túnel_de_agua/Readme.md).
