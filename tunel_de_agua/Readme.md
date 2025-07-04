@@ -94,7 +94,8 @@ Os principais equipamentos são:
 
 ### 2.1. Instrumentação 
 
-![](Imagens/manometro_pitot.png)
+
+![](./Imagens/manometro_pitot.png)
 
 Figura 2.1. Manometro e tubo de pitot
 ___
