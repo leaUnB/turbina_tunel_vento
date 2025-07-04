@@ -94,7 +94,8 @@ Os principais equipamentos são:
 
 ### 2.1. Instrumentação 
 
-![] (Imagens/manometro_pitot.png)
+![](Imagens/manometro_pitot.png)
+
 Figura 2.1. Manometro e tubo de pitot
 ___
 
@@ -113,7 +114,9 @@ Além disso, o equipamento é capaz aplicar uma carga no eixo mecânico da héli
 O equipamento foi desenvolvido no LEA e já deu suporte a diversas pesquisas de graduação e pos-graduação (refenciar os tcc, dissertaçoes e teses).
 
 ---
-# 4. Experimentos do Túnel de Água
+# 3. Experimentos do Túnel de Água
 
-## 4.1 Turbina Hidrocinética
+## 3.1. Procedimento de calibração
+
+## 3.2. Turbina Hidrocinética
 
