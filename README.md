@@ -21,12 +21,12 @@ O túnel de vento foi projetado para ser utilizado em testes de desempenho e an�
 
 ![](./tunel_de_vento/Imagens/tunel_vento.jpg)
 
-A descrição do túnel de vento se encontram no arquivo `Readme.md`  na pasta `tunel\_de\_vento/` [neste link] (./tunel_de_vento/Readme.md).
+A descrição do túnel de vento se encontram no arquivo `Readme.md`  na pasta `tunel_de_vento` [neste link](./tunel_de_vento/Readme.md).
 
-# [O Túnel de Água](./túnel_de_agua/Readme.md)
+# [O Túnel de Água](./tunel_de_agua/Readme.md)
 
 O túnel de água foi projetado para ser utilizado em testes de desempenho e análise de escoamentos e aerodinâmcios em turbinas hidrocinéticas.
 
 ![](./Túnel%20de%20Água/Imagens/tunel_de_agua.jpg)
 
-A descrição do túnel de água se encontram no arquivo `Readme.md` na pasta `tunel\_de\_agua/`  [neste link] (./túnel_de_agua/Readme.md)
+A descrição do túnel de água se encontram no arquivo `Readme.md` na pasta `tunel_de_agua`  [neste link] (/tunel_de_agua/Readme.md)
