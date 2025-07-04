@@ -131,6 +131,12 @@ Além disso, o equipamento é capaz aplicar uma carga no eixo mecânico da héli
 
 O equipamento foi desenvolvido no LEA e já deu suporte a diversas pesquisas de graduação e pos-graduação (refenciar os tcc, dissertaçoes e teses).
 
+
+![](Imagens/foto_turbina_no_tunel.jpg)
+
+Figura 2.1.1
+___
+
 O sistema é composto por uma gerador elérica que funciona como freio e a instrumentação para medir torque e rotação da hélice. 
 
 O torque é medido por meio de uma par de extensómetros (*strain guages*) colado no eixo da hélice.
@@ -191,7 +197,7 @@ O dinamômetro pode ser operado diretamento pelo ScadaLTS, inclusive para os rot
 O posicionandor XYZ é um braço articulado comandado por 3 motores de passo para posicionador um transdutor de velocidade de vento em qualquer posição na área de trabalho da turbina. 
 A Figura 2.2 mostra os detalhes do posicionador.
 
-![](./Imagens/atualizar.png)
+![](./Imagens/foto_posicionador_xyz.jpg)
 
 Figura 2.2. Foto com deltalhe do posicionador XYZ
 ___
@@ -209,7 +215,7 @@ Os comandos do posicionador são implementos por uma biblioteca em Python no com
 
 O transdutor de anemômetro de fio quente é uma usado para medir a velocidade do vento no túnel. 
 
-![](./Imagens/atualizar.png)
+![](./Imagens/conv_adc_anemometro.jpg)
 
 Figura 2.3.1 Foto com deltalhe do anemômetro
 ___
@@ -350,6 +356,9 @@ Este procedimento é realizado, fazendo um ensaio do medição de torque inician
 
 De posso desses valores pode se levantar a curva de calibração e obter os valores reais do `ganho` e `offset`. 
 Para gravar os valores na memória não volátil do dinamômetro, tem que se ativar o bit de `calibração=1` e depois retornar pata `calibracao=1`. 
+
+
+![](Imagens/torque_calibracao.jpg)
 
 Feito isso pode-se iniciar o ensaio. 
 
