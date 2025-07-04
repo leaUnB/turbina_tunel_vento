@@ -1,8 +1,8 @@
-# Laboratório de Energia e Ambiente (LEA) -Bancadas Experimentais
+# Laboratório de Energia e Ambiente (LEA) - Bancadas Experimentais
 
 Apresentação
 
-É uma unidade acadêmica da Universidade de Brasília (UnB) dedicada à pesquisa aplicada em engenharia de energia e meio ambiente. Nosso foco está nas abordagens de engenharia e sustentabilidade aplicadas à avaliação de sistemas de energia renovável. O LEA se preocupa com as interfaces entre as tecnologias de conversão de recursos energético, a sociedade e o meio ambiente. Sua pesquisa visa promover o melhor uso dos vetores – renováveis ​​e fósseis – para o bem-estar social e serviços ecossistêmicos.
+O LEA é um laboratório da Faculdade de Tecnologia da Universidade de Brasília (UnB) dedicada à pesquisa aplicada em engenharia de energia e meio ambiente. Nosso foco está nas abordagens de engenharia e sustentabilidade aplicadas à avaliação de sistemas de energia renovável. O LEA se preocupa com as interfaces entre as tecnologias de conversão de recursos energético, a sociedade e o meio ambiente. Sua pesquisa visa promover o melhor uso dos vetores – renováveis ​​e fósseis – para o bem-estar social e serviços ecossistêmicos.
 
 O laboratório é constituído por 17 professores universitários, 2 pesquisadores colaboradores e cerca de 45 alunos de graduação e pós-graduação de oito diferentes nacionalidades. Esses, envolvidos em projetos de pesquisa interdisciplinares em diferentes áreas de interesse (solar, hidrelétrica, eólica, biomassa, avaliação de ciclo de vida etc.).
 
@@ -15,7 +15,7 @@ ___
 
 As Instalações Experimentais são:
 
-# 1. [O Túnel de Vento](./tunel_de_vento/Readme.md)
+# [O Túnel de Vento](./tunel_de_vento/Readme.md)
 
 O túnel de vento foi projetado para ser utilizado em testes de desempenho e análise de escoamentos e aerodinâmicos em turbinas hidrocinéticas e eólicas, asas de avião e aerofólios, etc. e usa instrumentação específica e um sistema de aquisição de dados e controle para disponibilizar e organizar os dados medidos.
 
@@ -23,7 +23,7 @@ O túnel de vento foi projetado para ser utilizado em testes de desempenho e an�
 
 A descrição do túnel de vento se encontram no arquivo `Readme.md`  na pasta `tunel\_de\_vento/` [neste link] (./tunel_de_vento/Readme.md).
 
-# 2. [O Túnel de Água](./túnel_de_agua/Readme.md)
+# [O Túnel de Água](./túnel_de_agua/Readme.md)
 
 O túnel de água foi projetado para ser utilizado em testes de desempenho e análise de escoamentos e aerodinâmcios em turbinas hidrocinéticas.
 
