@@ -1,4 +1,4 @@
-#Túnel de vento
+# Túnel de vento
 
 Apresentação
 
@@ -153,14 +153,35 @@ A Figura 2.1. mostra os componentes do dinamômetro e na imagem, temos cada núm
 
 
 ![](./Imagens/modelo_reduzido_exp_turbina_eol.png)
-Figura 2.1. Dinamômetro 
+Figura 2.1.2. Dinamômetro 
 ___
 
 Esse dinamômetro é comum a todos os modelos reduzidos de turbinas desenvolvidos no Laboratório de Energia e Ambiente.
 
 O gerador elétrico, dependendo da aplicação, pode ser um motor de corrente contínua de imã permanente, ou um motor CC bruschless. Estes motores são usados como gerador e para gerar uma carga mécanica no eixo de gerador é aplicada uma carga elétrica variável na sua saída. 
 
-Uma placa de controle do dinamômetro desenvolvido pelo LEA controle a carga elétrica aplicada ao motor e ao mesmo tempo monitora a rotação e torque do hélice. A carga elétrica é controlada por meio do controle da rotação do dinamômetro. 
+Uma placa de controle do dinamômetro desenvolvido pelo LEA controle a carga elétrica aplicada ao motor e ao mesmo tempo monitora a rotação e torque do hélice. 
+
+![](./Imagens/dinamometro_controlador.jpeg)
+Figura 2.1.3. Controlador dinamômetro
+
+O circuito eletrônico do Contralador é 
+
+![](Imagens/dinamometro_esquema_eletronica.jpg) 
+Figura 2.1.4 Esquema eletrônica
+
+A placa de controle tem duas funções:
+
+* ler a rotação do gerador
+* ler o torque do célula de carga
+* aplicar a carga ao gerador
+* manter a rotação constante por meio de um contraldor PID 
+
+A rotação é lido por meio de sensor ótica montado no eixo da turbina-gerador.
+
+O torque é medido por meio de um conjunto de strainguages e uma modelo de aquisição de sinal (HX711 ou ADS1256).
+
+A carga é aplicada ao gerador elétrica por meio de chaves mosfet acionado por sinal PWM. 
 
 A placa controladora do dinamômetro implementa um algoritmo de controle do tipo PID para a rotação e os parametros P,I, e D podem ser ajustados conforme a necessidade do experimento.
 
@@ -188,7 +209,7 @@ Os endereços dos registradores MOBUS do controlador são dados a seguir.
 
 Os valores dos registradores ganho e offset são usados no procedimento de calibração do dinamômtro e estes valores ficam gravados na memória não volátil do controlador e podem ser mudados pelo operador.
 
-O circuito eletrônico da placa de controle do dinamômetro pode ser visto neste [link](), e o programa de controle está neste [repositório](Geral/turbine_versao_modbus_ago2024/turbine_versao_modbus_ago2024.ino). 
+O circuito eletrônico da placa de controle do dinamômetro pode ser visto neste [link](imagens/dinamometro_esquema_eletronica.jpg), a    [placa de circuito impresso](imagens/dinamometro_pcb_eletronica.jpg) e o programa de controle está neste [repositório](Geral/turbine_versao_modbus_ago2024/turbine_versao_modbus_ago2024.ino). 
 
 O dinamômetro pode ser operado diretamento pelo ScadaLTS, inclusive para os rotinas de calibração do equipamento. O 1item 3.1 mostra os procedimentos para isso.
 
@@ -358,7 +379,8 @@ De posso desses valores pode se levantar a curva de calibração e obter os valo
 Para gravar os valores na memória não volátil do dinamômetro, tem que se ativar o bit de `calibração=1` e depois retornar pata `calibracao=1`. 
 
 
-![](Imagens/torque_calibracao.jpg)
+![](Imagens/torque_calibracao_2.jpg)
+(Silva, 2023)
 
 Feito isso pode-se iniciar o ensaio. 
 
@@ -369,3 +391,7 @@ Feito isso pode-se iniciar o ensaio.
 
 ### 4.2 Ensaio com Anemômetro de Fio Quente
 ___
+
+# Bibligrafia 
+
+Silva, Reginaldo Nunes. 2023. “TURBULÊNCIA POR TURBINAS DE EIXO CONVERSÃO DE ENERGIA CINÉTICA DE HORIZONTAL.” Universidade de Brasília - Tese de Doutorado - Programa de Pós-Graduação em Ciências Mecânicas.
