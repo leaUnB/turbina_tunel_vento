@@ -225,11 +225,23 @@ ___
 
 O posicionador é controlador por um microcontralador Arduino, com um conjunto de shiels para fazer o acionamento dos motores de passo e outros acessórios. 
 
+O Arduino shield CNC V3 é mostrada na figura a seguir é um driver de potência para acionar os 3 motores de passo do posicionador.
+Cada motor de passo tem os correspondentes sensores de fim de curso.
+
+
+![](./Imagens/cnc_shield_pinos.jpg)
+
+O shield pode ser alimentado por uma fonte de tensão de 12Vcc a 36Vcc. 
+
 O controle de posicionamento é implementado por meio de um programa de controle que tem uma interface de comando do tipo GCODE muito usado em posiconadores. 
 
 Atualmente o posicionador está ligado a um computador especiífico de instrumentação que ainda não se comunica com o ScadaLTS. 
 
 Os comandos do posicionador são implementos por uma biblioteca em Python no computador de instrumentação.
+
+![](./Imagens/box_cnc_top.jpg)
+
+![](./Imagens/box_cnc_persp.jpg)
 
 
 ### 2.3. Transdutor anemômetro
@@ -277,7 +289,7 @@ Atualmente, esse sistema não está conectado ao computador, permitindo apenas a
 
 ## 3. Sistema supervisório ScadaLTS 
 
-Toda interface oara operar a túnel é realizado por meio de um sistema de SCADA (*Supervisory Control and Data Aquisition*, em inglês).
+Toda interação para operar a túnel é realizado por meio de um sistema de SCADA (*Supervisory Control and Data Aquisition*, em inglês).
 
 
 O Sistema Supervisório de Controle e Aquisição de Dados (SCADA) utilizado é o [SCADA LTS](https://github.com/SCADA-LTS/Scada-LTS), um software de código aberto desenvolvido derivada do [ScadaBR](https://scadabr.org/) desenvolvido no Brasil.
